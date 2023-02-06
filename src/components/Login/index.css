@@ -1,0 +1,12 @@
+.Login-bgcont {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.login-form-container {
+  background-color: #2c364c;
+  color: white;
+  padding: 55px;
+}

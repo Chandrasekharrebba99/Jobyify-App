@@ -1,0 +1,19 @@
+.nav-header {
+  display: flex;
+  background-color: #2c364c;
+  color: aliceblue;
+  justify-content: space-between;
+}
+.nav-content {
+  display: flex;
+  color: aliceblue;
+}
+
+.nav-menu {
+  display: flex;
+  color: white;
+}
+
+li {
+  color: aliceblue;
+}
