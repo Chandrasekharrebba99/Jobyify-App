@@ -1,0 +1,15 @@
+.JobstopCont {
+  display: flex;
+  justify-content: space-around;
+  background-color: black;
+  color: aliceblue;
+  height: 100%;
+}
+.leftbox {
+  width: 30%;
+}
+.topBGBox {
+}
+.rightbox {
+  width: 70%;
+}

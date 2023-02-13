@@ -1,4 +1,6 @@
 import {Component} from 'react'
+import Cookies from 'js-cookie'
+import {Redirect} from 'react-router-dom'
 
 import './index.css'
 
@@ -6,11 +8,22 @@ class Login extends Component {
   state = {
     username: '',
     password: '',
+    showSubmitError: false,
+    errorMsg: '',
   }
 
-  onSubmitSuccess = () => {
+  onSubmitSuccess = jwtTkoken => {
     const {history} = this.props
     history.replace('/')
+    Cookies.set('jwt_token', jwtTkoken, {
+      expires: 30,
+      path: '/',
+    })
+  }
+
+  onSubmitFailure = errorMsg => {
+    console.log(errorMsg)
+    this.setState({showSubmitError: true, errorMsg})
   }
 
   submitForm = async event => {
@@ -25,7 +38,9 @@ class Login extends Component {
     const response = await fetch(url, options)
     const data = await response.json()
     if (response.ok === true) {
-      this.onSubmitSuccess()
+      this.onSubmitSuccess(data.jwt_token)
+    } else {
+      this.onSubmitFailure(data.error_msg)
     }
   }
 
@@ -74,6 +89,11 @@ class Login extends Component {
   }
 
   render() {
+    const {showSubmitError, errorMsg} = this.state
+    const jwtToken = Cookies.get('jwt_token')
+    if (jwtToken !== undefined) {
+      return <Redirect to="/" />
+    }
     return (
       <div className="Login-bgcont">
         <div className="login-form-container">
@@ -88,6 +108,7 @@ class Login extends Component {
             <button type="submit" className="login-button">
               Login
             </button>
+            {showSubmitError && <p className="error-message">*{errorMsg}</p>}
           </form>
         </div>
       </div>

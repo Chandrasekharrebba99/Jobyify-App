@@ -5,18 +5,21 @@ import './index.css'
 
 const Header = props => {
   const onClickLogout = () => {
-    Cookie.remove('jwt_token')
     const {history} = props
     history.replace('/login')
+    Cookie.remove('jwt_token')
   }
   return (
     <nav className="nav-header">
       <div className="nav-content">
-        <img
-          className="website-logo"
-          src="https://assets.ccbp.in/frontend/react-js/logo-img.png"
-          alt="website logo"
-        />
+        <Link to="/">
+          <img
+            className="website-logo"
+            src="https://assets.ccbp.in/frontend/react-js/logo-img.png"
+            alt="website logo"
+          />
+        </Link>
+
         <ul className="nav-menu">
           <Link to="/" className="nav-link">
             <li>Home</li>
@@ -24,16 +27,16 @@ const Header = props => {
           <Link to="/jobs" className="nav-link">
             <li>Jobs</li>
           </Link>
+          <li>
+            <button
+              type="button"
+              className="logout-desktop-btn"
+              onClick={onClickLogout}
+            >
+              Logout
+            </button>
+          </li>
         </ul>
-        <div>
-          <button
-            type="button"
-            className="logout-desktop-btn"
-            onClick={onClickLogout}
-          >
-            Logout
-          </button>
-        </div>
       </div>
     </nav>
   )
