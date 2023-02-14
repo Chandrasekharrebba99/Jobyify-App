@@ -19,16 +19,31 @@ const JobItem = props => {
   return (
     <Link to={`/jobs/${id}`}>
       <li id={id} className="liel">
-        <img src={companyLogoURL} alt="company logo" />
-        <h1>title</h1>
-        <h1 className="colorwhite">{title}</h1>
-        <MdLocationOn />
-        <p>{location}</p>
-        <AiFillStar />
-        <p>{rating}</p>
-        <BsBriefcaseFill />
-        <p>{Package}</p>
-        <p>{employmentType}</p>
+        <div className="logoCont">
+          <img src={companyLogoURL} className="logo" alt="company logo" />
+          <div>
+            <h1 className="colorwhite">{title}</h1>
+            <div className="ratingCont">
+              <p>{rating}</p>
+              <AiFillStar />
+            </div>
+          </div>
+        </div>
+        <div className="makeRow">
+          <div className="liel2">
+            <MdLocationOn />
+            <p>{location}</p>
+          </div>
+          <div className="liel2">
+            <BsBriefcaseFill />
+            <p>{employmentType}</p>
+          </div>
+          <div className="packagecont">
+            <p>{Package}</p>
+          </div>
+        </div>
+        <hr />
+        <h1>Description</h1>
         <p>{JobDescription}</p>
       </li>
     </Link>

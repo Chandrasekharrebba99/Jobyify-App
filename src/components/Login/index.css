@@ -9,4 +9,35 @@
   background-color: #2c364c;
   color: white;
   padding: 55px;
+  width: 500px;
+  border-radius: 10px;
+}
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.username-input-filed {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.password-input-filed {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.login-button {
+  background-color: #6366f1;
+  border-radius: 5px;
+  padding: 20px;
+  border: none;
 }

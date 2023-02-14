@@ -13,3 +13,13 @@
 .rightbox {
   width: 70%;
 }
+.profileBG {
+  background-image: url('https://assets.ccbp.in/frontend/react-js/profile-bg.png');
+  background-size: cover;
+  color: black;
+  width: 250px;
+  height: 250px;
+}
+.JobstopCont {
+  padding: 25px;
+}

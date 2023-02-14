@@ -12,8 +12,20 @@
 .nav-menu {
   display: flex;
   color: white;
+  justify-content: space-around;
 }
-
+.nav-menu {
+  display: flex;
+  justify-content: center;
+}
 li {
   color: aliceblue;
+}
+.home {
+  color: aliceblue;
+  margin: 10px;
+}
+.nav-content {
+  display: flex;
+  justify-content: space-between;
 }

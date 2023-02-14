@@ -5,4 +5,30 @@
   width: 80%;
   padding: 20px;
   margin: 25px;
+  border-radius: 25px;
+  text-decoration: none;
+}
+.logoCont {
+  display: flex;
+}
+.ratingCont {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  margin-right: 10px;
+}
+.makeRow {
+  display: flex;
+}
+li {
+  list-style-type: none;
+}
+.liel2 {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+.packagecont {
+  align-self: flex-end;
 }

@@ -1,3 +1,25 @@
 .topJobBgBox {
   background-color: #000000;
 }
+.SearchIN {
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  font-size: 16px;
+  background-color: white;
+
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  border-right: none;
+  border-radius: 0px;
+}
+.btnsearch {
+  width: 60px;
+  height: 50px;
+  border-left: none;
+}
+.searchBTNcont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

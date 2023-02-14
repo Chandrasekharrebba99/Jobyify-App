@@ -123,19 +123,23 @@ class JobItemDetails extends Component {
   renderSearch = () => {
     console.log('')
     return (
-      <div>
+      <div className="searchBTNcont">
         <input
           placeholder="Search"
           type="search"
           onChange={this.onChangeSearch}
+          className="SearchIN"
         />
-        <button
-          type="button"
-          data-testid="searchButton"
-          onClick={this.onChangeSearch}
-        >
-          <BiSearchAlt2 />
-        </button>
+        <div>
+          <button
+            type="button"
+            data-testid="searchButton"
+            onClick={this.onChangeSearch}
+            className="btnsearch"
+          >
+            <BiSearchAlt2 />
+          </button>
+        </div>
       </div>
     )
   }

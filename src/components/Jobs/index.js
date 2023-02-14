@@ -122,7 +122,7 @@ class Jobs extends Component {
     const {ProfileDetails} = this.state
     const {profilPic, name, shortBio} = ProfileDetails
     return (
-      <div>
+      <div className="profileBG">
         <div>
           <img src={profilPic} alt="profile" />
           <h1>{name}</h1>
@@ -198,8 +198,10 @@ class Jobs extends Component {
         <div className="JobstopCont">
           <div className="leftbox">
             {this.renderSwitch()}
+            <hr />
             <h1>Type of Employment</h1>
             <div>{this.renderJobTypes()}</div>
+            <hr />
             <h1>Salary Range</h1>
             <div>{this.renderSalaryRange()}</div>
           </div>
