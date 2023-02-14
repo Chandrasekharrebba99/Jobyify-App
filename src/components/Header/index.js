@@ -21,12 +21,17 @@ const Header = props => {
         </Link>
 
         <ul className="nav-menu">
-          <Link to="/" className="nav-link">
-            <li className="home">Home</li>
-          </Link>
-          <Link to="/jobs" className="nav-link">
-            <li className="home">Jobs</li>
-          </Link>
+          <l1>
+            <Link to="/" className="nav-link">
+              <li className="home">Home</li>
+            </Link>
+          </l1>
+          <li>
+            <Link to="/jobs" className="nav-link">
+              <li className="home">Jobs</li>
+            </Link>
+          </li>
+
           <li>
             <button
               type="button"

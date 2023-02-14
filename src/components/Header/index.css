@@ -12,7 +12,6 @@
 .nav-menu {
   display: flex;
   color: white;
-  justify-content: space-around;
 }
 .nav-menu {
   display: flex;
@@ -28,4 +27,7 @@ li {
 .nav-content {
   display: flex;
   justify-content: space-between;
+}
+.loginBtn {
+  align-self: flex-end;
 }
